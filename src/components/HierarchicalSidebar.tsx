@@ -11,8 +11,8 @@ export const HierarchicalSidebar: React.FC = () => {
     const toggleCategory = useOpsStore((s) => s.toggleCategory);
 
     return (
-        <div className="h-full w-full bg-slate-900 border-r border-slate-800 overflow-y-auto">
-            <div className="py-2">
+        <div className="h-full w-full bg-slate-900 border-r border-slate-800 overflow-y-auto overflow-x-hidden">
+            <div className="py-2 min-h-full">
                 {panelHierarchy.map((category) => {
                     const isExpanded = expandedCategories.includes(category.id);
                     const CategoryIcon = category.icon;

@@ -17,6 +17,20 @@ import {
     Shield,
     Lock,
     AlertTriangle,
+    Package,
+    Server,
+    CreditCard,
+    DollarSign,
+    Wrench,
+    PlayCircle,
+    GitPullRequest,
+    Heart,
+    HelpCircle,
+    Lightbulb,
+    Award,
+    TrendingUp,
+    Users,
+    PieChart,
     LucideIcon
 } from 'lucide-react';
 
@@ -96,6 +110,50 @@ export const panelHierarchy: PanelCategory[] = [
         icon: FileText,
         panels: [
             { id: 'details', label: 'Details Panel', component: 'details', icon: FileText },
+        ]
+    },
+    {
+        id: 'assets',
+        label: 'Assets & Infrastructure',
+        icon: Package,
+        panels: [
+            { id: 'inventory', label: 'Asset Inventory', component: 'placeholder', icon: Package },
+            { id: 'hardware', label: 'Hardware Status', component: 'placeholder', icon: Server },
+            { id: 'licenses', label: 'Software Licenses', component: 'placeholder', icon: FileText },
+            { id: 'costs', label: 'Cost Analysis', component: 'placeholder', icon: DollarSign },
+        ]
+    },
+    {
+        id: 'ops',
+        label: 'Operations',
+        icon: Wrench,
+        panels: [
+            { id: 'runbooks', label: 'Runbooks', component: 'placeholder', icon: PlayCircle },
+            { id: 'incident-response', label: 'Incident Response', component: 'placeholder', icon: AlertTriangle },
+            { id: 'change-mgmt', label: 'Change Management', component: 'placeholder', icon: GitPullRequest },
+            { id: 'service-health', label: 'Service Health', component: 'placeholder', icon: Heart },
+        ]
+    },
+    {
+        id: 'kb',
+        label: 'Knowledge Base',
+        icon: BookOpen,
+        panels: [
+            { id: 'docs', label: 'Documentation Browser', component: 'placeholder', icon: BookOpen },
+            { id: 'faq', label: 'FAQ & Troubleshooting', component: 'placeholder', icon: HelpCircle },
+            { id: 'best-practices', label: 'Best Practices', component: 'placeholder', icon: Award },
+            { id: 'lessons', label: 'Lessons Learned', component: 'placeholder', icon: Lightbulb },
+        ]
+    },
+    {
+        id: 'markets',
+        label: 'Markets & Analytics',
+        icon: TrendingUp,
+        panels: [
+            { id: 'trends', label: 'Market Trends', component: 'placeholder', icon: TrendingUp },
+            { id: 'competitors', label: 'Competitor Analysis', component: 'placeholder', icon: Users },
+            { id: 'pricing', label: 'Service Pricing', component: 'placeholder', icon: CreditCard },
+            { id: 'usage', label: 'Usage Analytics', component: 'placeholder', icon: PieChart },
         ]
     }
 ];
