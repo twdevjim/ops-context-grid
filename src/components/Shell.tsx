@@ -48,7 +48,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             </header>
 
             {/* Left Sidebar (Hierarchical Panel Navigator) */}
-            <aside className="row-start-2 row-span-1">
+            <aside className="row-start-2 row-span-1 h-full overflow-hidden">
                 <HierarchicalSidebar />
             </aside>
 
