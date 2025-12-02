@@ -1,6 +1,7 @@
 import React from 'react';
 import { useOpsStore } from '../store/opsStore';
 import { HierarchicalSidebar } from './HierarchicalSidebar';
+import { DiscoverySidebar } from './DiscoverySidebar';
 
 interface ShellProps {
     children: React.ReactNode;
@@ -57,12 +58,9 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
                 {children}
             </main>
 
-            {/* Right Sidebar (Context) */}
-            <aside className="row-start-2 row-span-1 col-start-3 bg-slate-900 border-l border-slate-800 p-4">
-                <h2 className="text-xs font-bold uppercase text-slate-500 mb-4">Context</h2>
-                <div className="text-sm text-slate-400">
-                    Select an item to see details.
-                </div>
+            {/* Right Sidebar (Discovery/Context Panel) */}
+            <aside className="row-start-2 row-span-1 h-full overflow-hidden">
+                <DiscoverySidebar />
             </aside>
 
             {/* Footer */}
